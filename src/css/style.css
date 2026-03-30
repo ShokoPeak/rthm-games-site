@@ -129,6 +129,18 @@ footer {
   margin-bottom: 0.75rem;
 }
 
+main p {
+  margin-bottom: 1.25rem;
+}
+
+main ul, main ol {
+  margin-bottom: 1.25rem;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
 .post-content a {
   color: var(--accent-light);
 }
