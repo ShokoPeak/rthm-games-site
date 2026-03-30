@@ -133,6 +133,14 @@ footer {
   color: var(--accent-light);
 }
 
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  display: block;
+}
+
 /* Embedded videos */
 .video-embed {
   position: relative;
