@@ -6,6 +6,29 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
   });
 
+  eleventyConfig.addCollection("games", function (collectionApi) {
+    const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
+    const games = {};
+    for (const post of posts) {
+      const game = post.data.game;
+      if (game) {
+        if (!games[game]) {
+          games[game] = [];
+        }
+        games[game].push(post);
+      }
+    }
+    // Sort posts within each game newest-first
+    for (const game of Object.keys(games)) {
+      games[game].sort((a, b) => b.date - a.date);
+    }
+    return games;
+  });
+
+  eleventyConfig.addFilter("slugify", function (str) {
+    return str.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+  });
+
   eleventyConfig.addFilter("dateFormat", function (date) {
     return new Date(date).toLocaleDateString("en-US", {
       year: "numeric",

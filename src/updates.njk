@@ -7,7 +7,7 @@ title: Updates
 
 {% for post in collections.posts %}
 <article class="post">
-  <div class="post-date">{{ post.date | dateFormat }}</div>
+  <div class="post-date">{{ post.date | dateFormat }}{% if post.data.game %} &middot; <a href="/games/{{ post.data.game | slugify }}/" style="color: var(--accent-light);">{{ post.data.game }}</a>{% endif %}</div>
   <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
   <div class="post-content">
     {{ post.templateContent | safe }}

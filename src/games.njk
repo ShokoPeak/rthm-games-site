@@ -5,9 +5,13 @@ title: Games
 
 <h1 style="margin-bottom: 1.5rem;">Games</h1>
 
+{% for gameName, posts in collections.games %}
 <div class="post">
-  <h2>Margin Call!</h2>
-  <div class="post-content">
-    <p>More details coming soon.</p>
-  </div>
+  <h2><a href="/games/{{ gameName | slugify }}/">{{ gameName }}</a></h2>
+  <p style="color: var(--text-muted);">{{ posts.length }} update{{ "s" if posts.length != 1 }}</p>
 </div>
+{% endfor %}
+
+{% if collections.games | length == 0 %}
+<p style="color: var(--text-muted);">No games yet. Check back soon!</p>
+{% endif %}
