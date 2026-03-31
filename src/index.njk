@@ -23,3 +23,18 @@ title: Home
 {% if collections.posts.length > 5 %}
 <p><a href="/updates/" style="color: var(--accent-light);">View all updates &rarr;</a></p>
 {% endif %}
+
+{% if collections.heartbeat.length > 0 %}
+<h2 style="margin-top: 2.5rem; margin-bottom: 1rem;">WorkBOT Latest</h2>
+
+{% set latest = collections.heartbeat[0] %}
+<article class="post heartbeat-post">
+  <div class="post-date">{{ latest.date | dateFormat }} &middot; <span class="workbot-tag">WorkBOT</span></div>
+  <h2>{{ latest.data.title }}</h2>
+  <div class="post-content">
+    {{ latest.templateContent | safe }}
+  </div>
+</article>
+
+<p><a href="/heartbeat/" style="color: var(--accent-light);">View all heartbeats &rarr;</a></p>
+{% endif %}
