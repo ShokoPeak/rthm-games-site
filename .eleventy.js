@@ -6,6 +6,10 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
   });
 
+  eleventyConfig.addCollection("heartbeat", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/heartbeat/*.md").reverse();
+  });
+
   eleventyConfig.addCollection("games", function (collectionApi) {
     const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
     const games = {};
