@@ -16,11 +16,9 @@ The first map is based on the New York Stock Exchange building, a landmark of Wa
 
 Fun fact - You might be incredibly surprised to learn that the NYSE takes security very seriously, and as such it has been quite difficult to find reference material for the building. Also i'm pretty sure i'm on a watchlist now, so my other project to build a subterrenean digging machine to tunnel my way inside is on indefinite hiatus.
 
-Luckily, I came across the fantastic Australian architectural artist Simon Fieldhouse and his amazing rendering of the outside of the NYSE (tunneling machine on standby).
+Luckily, the building is featured extensively in the NYSE's socials and there are some truly excellent artistic renderings of the building by people such as Australian architectual artist Simon Fieldhouse to draw inspiration from. (tunneling machine on standby)
 
 ![Screenshot 2](/images/margincall/mc2p2.png)
-
-(Reference image property of Simon Fieldhouse - https://simonfieldhouse.com/new-york-icons/new-york-stock-exchange/)
 
 This gives a bigger playspace for the map which will host a number of the trading desks as you might find inside the real building. Will these desks do anything? Do they add new gameplay mechanics? Are they resistant to tunnel boring machines? My answer is an enthusiastic "YES! (probably)" but more details on that in a later update. I do have some cool ideas to allow players to play the market differently...
 
